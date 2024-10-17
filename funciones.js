@@ -35,33 +35,19 @@ const imagenes = {prestamos: 'prestamosbiblio.jpg', socios: 'userbiblio.jpg', in
 // Aquí van las funciones
 
 export function listaPrestamos() {
-    // crea una lista de préstamos
-    let ul = document.createElement('ul');
-    ul.className = 'list-group';
-    arrayPrestamos.forEach( prestamo => {
-        const li = document.createElement('li');
-        li.className = 'list-group-item';
-        li.innerHTML = `<div class="d-flex w-100 justify-content-between">` +
-                        `<h5>${prestamo.titulo}</h5>` +
-                        `<small>id: ${prestamo.id} - autor: ${prestamo.autor}</small>` +
-                        `</div>`;
-        ul.appendChild(li); 
-    } );
-    console.log(ul);
-    return ul;
+    // crea una lista de préstamos y la devuelve
+    
 }
     
 
 export function imgPrestamos() {
-    const imagen = imagenes.prestamos;
-    return imagen;
+    // devuelve la imagen de préstamos
 }
 
 export function listaSocios() {
-    
+    // Crea y devuelve la lista de socios
 }
 
 export function imgSocios() {
-    const imagen = imagenes.socios;
-    return imagen;
+    // devuelve laimagen de socios
 }

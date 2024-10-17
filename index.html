@@ -48,20 +48,25 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" onclick="window.location.reload()">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  onclick="window.location.reload()"
+                  >Home</a
+                >
                 <!-- Se recarga la página. EJERCICIO AVANZADO: llama a la información original sin resetear la página, osea sin recargarla.-->
               </li>
               <li class="nav-item">
                 <!--*******************************************************************************************-->
-                <!-- también esta llama a préstamos EJERCICIO 0.1 Cambiar ref="#" por el evento correspondiente-->
+                <!-- también esta llama a préstamos. EJERCICIO 0.1 Cambiar ref="#" por el evento correspondiente-->
                 <!--*******************************************************************************************-->
-                <a class="nav-link btn" onclick="verPrestamos()">Préstamos</a>
+                <a class="nav-link btn" ref="#">Préstamos</a>
               </li>
               <li class="nav-item">
                 <!--****************************************************************************************************-->
                 <!-- también esta llama a la lista de socios.EJERCICIO 0.2 Cambiar ref="#" por el evento correspondiente-->
                 <!--****************************************************************************************************-->
-                <a class="nav-link btn" onclick="verSocios()">Socios</a>
+                <a class="nav-link btn" ref="#">Socios</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link disabled" aria-disabled="true">Actividades</a
@@ -76,35 +81,30 @@
         </div>
       </nav>
     </div>
-    <!-- Segundo habilitamos el área de trabajo. Esta se divide en dos columnas, la de la derecha para poner una imagen, la de la izquierda para el contenido de texto-->
-    <div class="container">
-      <!-- Contenedor principal del area de información o trabajo -->
-      <div class="row text-center m-1 h-100">
-        <!-- Este sería el row (fila) que contiene dos columnas, una con el texto y botones, otra con la imágen-->
-        <div class="col-lg-6 mt-5 p-5" id="texto">
-          <!-- Columna con el texto y los botones-->
+    <!-- Segundo habilitamos el área de trabajo (grid css de bootstrap). Esta se divide en dos columnas, la de la derecha para poner una imagen, la de la izquierda para el contenido de texto EJERCICIO 0.3 Convierte este div en el contenedor principal-->
+    <div class="">
+      <!-- EJERCICIO 0.4 Este div es una fila que contiene dos columnas, una con el texto y botones, otra con la imágen-->
+      <div class="text-center m-1 h-100">
+        <!-- EJERCICI 0.5 Este div ocupa la mitad del espacio a lo ancho (una columna de dos)-->
+        <div class="mt-5 p-5" id="texto">
           <!-- ********************************************************************************************* -->
-          <!-- EJERCICIO 0.3 Utiliza un elemento span para poner la palabra biblioteca de color verde (green)-->
+          <!-- EJERCICIO 0.6 Utiliza un elemento span para poner la palabra biblioteca de color verde (green)-->
           <!-- ********************************************************************************************* -->
-          <h1 class="mt-5">
-            Una <span style="color: green">biblioteca</span> para leer todos los
-            libros
-          </h1>
+          <h1 class="mt-5">Una biblioteca para leer todos los libros</h1>
           <p class="mt-2 p-2 text-md-start">
             Nuestra biblioteca dispone de más de 10.000 títulos de todas las
             categorías y edades, para que la lectura se convierta en un hábito
             regular y puedas disfrutar como lo hacemos nosotros.
           </p>
-          <div class="container mt-4 pt-2">
-            <!-- Contenedor para los botones tendrá una fila y dos columnas, para los cuatro botones -->
-            <div class="row pt-5">
+          <!-- EJERCICIO 0.7 Este div es un contenedor para el gris donde colocaré los botones, tendrá una fila y dos columnas-->
+          <div class="mt-4 pt-2">
+            <!-- Esta es la fila (yo he puesto sólo una) -->
+            <div class="pt-5">
               <!--********************************************************************************************-->
-              <!-- EJERCICIO 0.4 Botón para llamar a cargar los préstamos, configura el evento correspondiente-->
+              <!-- EJERCICIO 0.8 Botón para llamar a cargar los préstamos, configura el evento correspondiente-->
               <!--********************************************************************************************-->
-              <div
-                class="col-lg-4 offset-1 my-3 p-2 btn btn-outline-dark"
-                onclick="verPrestamos()"
-              >
+              <div class="col-lg-4 offset-1 my-3 p-2 btn btn-outline-dark">
+                <!-- icono del botón -->
                 <i class="bi bi-book-fill me-1"></i>
                 Préstamos
               </div>
@@ -113,15 +113,17 @@
                 <i class="bi bi-people-fill me-1"></i>
                 Actividades
               </div>
+
+              <!-- Con este div vacío nos aseguramos de tener dos filas para los botones, podría haber hecho dos filas-->
               <div class="w-100"></div>
-              <!-- Con este div vacío nos aseguramos de tener dos filas para los botones-->
+
               <div class="col-lg-4 offset-1 my-3 p-2 btn btn-outline-primary">
                 <!-- Botón para llamar a las novedades (tampoco hay que hacerlo)-->
                 <i class="bi bi-newspaper me-1"></i>
                 Novedades
               </div>
               <!--****************************************************************************************** -->
-              <!-- EJERCICIO 0.5 Botón para llamar a la lista de socios, configura el evento correspondiente -->
+              <!-- EJERCICIO 0.9 Botón para llamar a la lista de socios, configura el evento correspondiente -->
               <!--****************************************************************************************** -->
               <div
                 class="col-lg-4 offset-1 my-3 p-2 btn btn-outline-secondary"
@@ -133,9 +135,10 @@
             </div>
           </div>
         </div>
-        <!-- ========================================================================================================================== -->
-        <!-- RESULTADO DE EJERCICIO: columna de la izquierda, deberá cambiar de foto según llames a socios (userbiblio.jpg) o a préstamos (prestamosbiblio.jpg), deberá cambiarse cada una relacionada con el botón correspondiente-->
-        <!-- ========================================================================================================================== -->
+        <!-- ========================================================================================================================== 
+            RESULTADO DE EJERCICIO: columna de la izquierda, deberá cambiar de foto según llames a socios (userbiblio.jpg) o a préstamos 
+            (prestamosbiblio.jpg), deberá cambiarse cada una relacionada con el botón correspondiente
+             ========================================================================================================================== -->
         <div class="col-lg-5 m-2 pt-5" id="imagen">
           <img src="biblioteca.jpg" alt="Biblioteca" class="w-100" />
         </div>
@@ -150,9 +153,11 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- ****************************************** -->
-    <!-- EJERCICIO 1. Enlaza el main.js como módulo -->
-    <!-- ****************************************** -->
-     <script type="module" src="./main.js"></script>
+    <!--  
+      ******************************************
+      EJERCICIO 1. Enlaza el main.js como módulo 
+      ****************************************** 
+    -->
+    
   </body>
 </html>
