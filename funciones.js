@@ -18,7 +18,6 @@ const arrayPrestamos = [
     {id: 11, titulo: 'El Ritmo de la Guerra', autor: 'Brandon Sanderson', editorial: 'epulibre', tema: 'aventuras', prestado: true},   
 ];
 
-
 const arraySocios = [
     {idSocio: 1001, nombre: 'Aitor Tilla Depapas', mail: 'atilpas@biblio.bi'},
     {idSocio: 1011, nombre: 'Domingo Díaz de Carreras', mail: 'ddiaras@biblio.bi'},
@@ -37,45 +36,48 @@ const imagenes = {prestamos: 'prestamosbiblio.jpg', socios: 'userbiblio.jpg', in
 
 export function listaPrestamos() {
     // crea una lista de préstamos y la devuelve
-    const inputContainer = document.getElementById('inputContainer');
+    let crearUl = document.createElement('ul');
+    crearUl.className = 'list-group';
+    arrayPrestamos.forEach(l =>{
+        let fila = `
+             <li class="list-group-item">${l}</li>
+        `;
+        crearUl.innerHTML += fila;
+    });
 
-    // Mostrar los inputs y el botón para agregar un artículo
-    inputContainer.innerHTML = `
-        <div class="mb-3">
-            <input type="text" class="form-control mt-1" id="nombrePrestamo" placeholder="id,titulo,autor,editorial,tema,prestado">
-            <button class="btn btn-success mt-2" id="verListaPrestamos">Confirmar</button>
-        </div>
-    `;
-
-    // Mostrar el contenedor de inputs
-    inputContainer.style.display = 'block';
+    return crearUl;
+    
 }
     
 
 export function imgPrestamos() {
-    const imagen = document.getElementById('ImagenBiblioteca');
-    imagen.src = 'prestamosbiblio.jpg'; 
+    // devuelve la imagen de préstamos
+    let nuevaImagen = document.createElement('img');
+    nuevaImagen.className = 'img-fluid';
+    nuevaImagen.src = 'prestamosbiblio.jpg';
+  
+    return nuevaImagen;
 }
 
 export function listaSocios() {
     // Crea y devuelve la lista de socios
-    const inputContainer = document.getElementById('inputContainer');
+    let crearUl = document.createElement('ul');
+    crearUl.className = 'list-group';
+    arraySocios.forEach(l =>{
+        let fila = `
+             <li class="list-group-item">${l}</li>
+        `;
+        crearUl.innerHTML += fila;
+    });
 
-    // Mostrar los inputs y el botón para agregar un artículo
-    inputContainer.innerHTML = `
-        <div class="mb-3">
-            <input type="text" class="form-control mt-1" id="nombreSocios" placeholder="idSocio,nombre,mail">
-            <button class="btn btn-success mt-2" id="verListaSocios">Confirmar</button>
-        </div>
-    `;
-
-    // Mostrar el contenedor de inputs
-    inputContainer.style.display = 'block';
+    return crearUl;
 }
 
 export function imgSocios() {
-        const imagen = document.getElementById('imagenBiblioteca');
-        imagen.src = 'prestamosbiblio.jpg'; 
-      
-}
+    // devuelve laimagen de socios
+    let nuevaImagen = document.createElement('img');
+    nuevaImagen.className = 'img-fluid';
+    nuevaImagen.src = 'userbiblio.jpg';
   
+    return nuevaImagen;
+}
