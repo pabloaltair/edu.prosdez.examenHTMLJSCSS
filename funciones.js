@@ -18,6 +18,7 @@ const arrayPrestamos = [
     {id: 11, titulo: 'El Ritmo de la Guerra', autor: 'Brandon Sanderson', editorial: 'epulibre', tema: 'aventuras', prestado: true},   
 ];
 
+
 const arraySocios = [
     {idSocio: 1001, nombre: 'Aitor Tilla Depapas', mail: 'atilpas@biblio.bi'},
     {idSocio: 1011, nombre: 'Domingo Díaz de Carreras', mail: 'ddiaras@biblio.bi'},
@@ -36,18 +37,45 @@ const imagenes = {prestamos: 'prestamosbiblio.jpg', socios: 'userbiblio.jpg', in
 
 export function listaPrestamos() {
     // crea una lista de préstamos y la devuelve
-    
+    const inputContainer = document.getElementById('inputContainer');
+
+    // Mostrar los inputs y el botón para agregar un artículo
+    inputContainer.innerHTML = `
+        <div class="mb-3">
+            <input type="text" class="form-control mt-1" id="nombrePrestamo" placeholder="id,titulo,autor,editorial,tema,prestado">
+            <button class="btn btn-success mt-2" id="verListaPrestamos">Confirmar</button>
+        </div>
+    `;
+
+    // Mostrar el contenedor de inputs
+    inputContainer.style.display = 'block';
 }
     
 
 export function imgPrestamos() {
-    // devuelve la imagen de préstamos
+    const imagen = document.getElementById('ImagenBiblioteca');
+    imagen.src = 'prestamosbiblio.jpg'; 
 }
 
 export function listaSocios() {
     // Crea y devuelve la lista de socios
+    const inputContainer = document.getElementById('inputContainer');
+
+    // Mostrar los inputs y el botón para agregar un artículo
+    inputContainer.innerHTML = `
+        <div class="mb-3">
+            <input type="text" class="form-control mt-1" id="nombreSocios" placeholder="idSocio,nombre,mail">
+            <button class="btn btn-success mt-2" id="verListaSocios">Confirmar</button>
+        </div>
+    `;
+
+    // Mostrar el contenedor de inputs
+    inputContainer.style.display = 'block';
 }
 
 export function imgSocios() {
-    // devuelve laimagen de socios
+        const imagen = document.getElementById('ImagenBiblioteca');
+        imagen.src = 'prestamosbiblio.jpg'; 
+      
 }
+  
