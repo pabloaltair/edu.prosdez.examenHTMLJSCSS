@@ -11,9 +11,12 @@ import { listaPrestamos, imgPrestamos, listaSocios, imgSocios } from "./funcione
 // EJERCICIO 2.2 Crear las funciones de control de contenidos
 //      * Una función (o dos) que solicitará el listado formateado de préstamos/de socios y el nombre de la imagen correspondiente
 //      * Luego colocará el listado en el bloque de la izquierda sustituyendo lo que allí aparezca
-//      * Para terminar, colocará la imagen en la columna de la derecha
+//      * Para terminar, colocará la imagen en la columna de la derechaç
+function verPrestamos(){
 listaPrestamos();
-imgPrestamos();
+imgPrestamos();   
+}
+
 listaSocios();
 imgSocios();
 

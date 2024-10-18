@@ -74,7 +74,7 @@ export function listaSocios() {
 }
 
 export function imgSocios() {
-        const imagen = document.getElementById('ImagenBiblioteca');
+        const imagen = document.getElementById('imagenBiblioteca');
         imagen.src = 'prestamosbiblio.jpg'; 
       
 }
